@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -10,6 +10,13 @@
 \usepackage{bm}
 \usepackage{setspace}
 \usepackage{sectsty}
+
+\usepackage[kerning]{microtype}
+\usepackage[hidelinks,
+		    colorlinks=true,
+		    citecolor=blue,
+		    linkcolor=blue,
+		    urlcolor=blue]{hyperref}
 
 \usepackage{datetime}
 \usepackage{pdflscape}
@@ -52,6 +59,8 @@ theorems-ams
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -82,6 +91,7 @@ theorems-ams
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -94,7 +104,10 @@ theorems-ams
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -192,13 +205,6 @@ The abstract.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage pagebreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -219,6 +225,17 @@ Introduction
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "alias"
+literal "false"
+
+\end_inset
+
+ studies...
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -235,34 +252,9 @@ end{spacing}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage pagebreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section*
-References
-\end_layout
-
-\begin_layout Standard
 \align block
 \begin_inset ERT
 status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-leftskip=2em 
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-parindent=-2em
-\end_layout
 
 \begin_layout Plain Layout
 
@@ -277,49 +269,11 @@ onehalfspacing
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-noindent
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Last, First.
- Year.
- Title.
- 
-\shape italic
-Journal
-\shape default
- Volume#(issue#): page range.
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-parindent=2em
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-leftskip=0em
-\end_layout
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "references"
+options "chicago"
 
 \end_inset
 
